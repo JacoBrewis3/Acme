@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: rgb(241, 241, 241);
+}
+
+.btn {
+  text-transform: uppercase;
+
+  &-primary {
+    color: #fff;
+    background-color: rgb(95, 182, 91);
+  }
+  &-white {
+    background-color: #fff;
+    color: #000;
+    opacity:0.5;
+    border: 1px solid black;
+  }
+}
+
+
+.disabled {
+  pointer-events: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.even {
+  background-color: rgb(242, 242, 242);
+}
+.odd {
+  background-color: transparent;
+}

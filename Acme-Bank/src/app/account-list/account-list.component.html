@@ -1,0 +1,33 @@
+<mat-card class="mat-card-custom">
+  <div class="account-list-container">
+    <div class="account-list-container-inner">
+      <mat-card-title class="account-list-container-inner-header">Account List</mat-card-title>
+      <mat-card-content>
+          <table class="account-list-container-inner-table" width="100%" cellpadding="0" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Account Number</th>
+                <th>Account Balance</th>
+                <th>Balance</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="account-list-container-inner-table-content">
+                <tr *ngFor="let account of accountList; let i = index">
+                  <td>{{account.account_number}}</td>
+                  <td>{{account.account_type}}</td>
+                  <td>{{account.balance | currency:'ZAR' }}</td>
+                  <td class="text-center"><button mat-button class="btn" (click)="withDrawFromaccount(account)" [ngClass]="[getBalance(account)]">withdraw</button></td>
+                </tr>
+                <tr>
+                  <td><h2>Balance</h2></td>
+                  <td></td>
+                  <td><h2>{{totalBalance | currency:'ZAR'}}</h2></td>
+                  <td></td>
+                </tr>
+            </tbody>
+          </table>
+      </mat-card-content>
+    </div>
+  </div>
+</mat-card>
